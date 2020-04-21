@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %>
+
+<body>
+  <%- include('../partials/nav') %>
+  <%- include('../partials/header') %>
+
+  <% Object.keys(aboutSection).forEach(function (id) { %>
+  <article>
+    <h3><%= aboutSection[id].megAboutTitle %></h3>
+    <p><%= aboutSection[id].megAboutContent %></p>
+  </article>
+  <% }) %>
+
+  <% Object.keys(songSection).forEach(function (id) { %>
+  <article>
+    <h3><%= songSection[id].megSongsTitle %></h3>
+    <ol>
+      <li><%= songSection[id].megSongsA %></li>
+      <li><%= songSection[id].megSongsB %></li>
+      <li><%= songSection[id].megSongsC %></li>
+    </ol>
+  </article>
+  <% }) %>
+
+  <% Object.keys(imageSection).forEach(function (id) { %>
+  <figure>
+    <img src="<%= imageSection[id].megImage %>" alt="megan thee stallion">
+    <figcaption>
+      <%= imageSection[id].megCaption %>
+    </figcaption>
+  </figure>
+  <% }) %>
+
+</body>
+
+</html>

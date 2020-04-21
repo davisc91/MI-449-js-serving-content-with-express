@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %>
+
+<body>
+  <%- include('../partials/nav') %>
+  <%- include('../partials/header') %>
+
+  <% Object.keys(aboutSection).forEach(function (id) { %>
+  <article>
+    <h3><%= aboutSection[id].homeAboutTitle %></h3>
+    <p><%= aboutSection[id].homeAboutContent %></p>
+  </article>
+  <% }) %>
+
+  <% Object.keys(imageSection).forEach(function (id) { %>
+  <figure>
+    <img src="<%= imageSection[id].dojaImage2 %>" alt="megan thee stallion">
+    <figcaption>
+      <%= imageSection[id].dojaCaption2 %>
+    </figcaption>
+  </figure>
+  <% }) %>
+
+</body>
+
+</html>

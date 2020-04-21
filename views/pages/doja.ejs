@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %>
+
+<body>
+  <%- include('../partials/nav') %>
+  <%- include('../partials/header') %>
+
+  <% Object.keys(aboutSection).forEach(function (id) { %>
+  <article>
+    <h3><%= aboutSection[id].dojaAboutTitle %></h3>
+    <p><%= aboutSection[id].dojaAboutContent %></p>
+  </article>
+  <% }) %>
+
+  <% Object.keys(songSection).forEach(function (id) { %>
+  <article>
+    <h3><%= songSection[id].dojaSongsTitle %></h3>
+    <ol>
+      <li><%= songSection[id].dojaSongsA %></li>
+      <li><%= songSection[id].dojaSongsB %></li>
+      <li><%= songSection[id].dojaSongsC %></li>
+    </ol>
+  </article>
+  <% }) %>
+
+  <% Object.keys(imageSection).forEach(function (id) { %>
+  <figure>
+    <img src="<%= imageSection[id].dojaImage %>" alt="doja cat">
+    <figcaption>
+      <%= imageSection[id].dojaCaption %>
+    </figcaption>
+  </figure>
+  <% }) %>
+
+</body>
+
+</html>
